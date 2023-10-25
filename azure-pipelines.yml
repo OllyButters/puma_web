@@ -14,6 +14,13 @@
 # https://docs.microsoft.com/en-us/azure/devops/pipelines/library/service-endpoints?view=azure-devops&tabs=yaml
 resources:
   repositories:
+  # The actual source code
+  - repository: puma_source
+    type: github
+    endpoint: puma_gh_deployment
+    name: OllyButters/puma
+    ref: master
+  
   # Where all the configs are (private repo)
   - repository: puma_configs
     type: github
@@ -21,11 +28,11 @@ resources:
     name: OllyButters/puma_configs
     ref: master
 
-  # The gh-pages branch of main puma repo
+  # The gh-pages branch of puma_Web repo
   - repository: puma_web
     type: github
     endpoint: puma_gh_deployment
-    name: OllyButters/puma
+    name: OllyButters/puma_web
     ref: gh-pages
 
   # Cache repo (private repo)
@@ -62,12 +69,12 @@ jobs:
       OLLY:
         config_file_name: 'config_olly.ini'
         project_short_name: 'olly'
-      ALSPAC:
-        config_file_name: 'config_ALSPAC.ini'
-        project_short_name: 'alspac'
-      HDRUK:
-        config_file_name: 'config_HDRUK.ini'
-        project_short_name: 'hdruk'
+      #ALSPAC:
+      #  config_file_name: 'config_ALSPAC.ini'
+      #  project_short_name: 'alspac'
+      #HDRUK:
+      #  config_file_name: 'config_HDRUK.ini'
+      #  project_short_name: 'hdruk'
       #CLAHRC:
       #  config_file_name: 'config_clahrc.ini'
       #  project_short_name: 'clahrc'
@@ -80,7 +87,7 @@ jobs:
     # This may give an error in the logs like:
     # [warning]Unable move and reuse existing repository to required location
     # This is an Azure bug - https://github.com/microsoft/azure-pipelines-yaml/issues/403
-  - checkout: self
+  - checkout: puma_source
     path: 'puma'
 
   - checkout: puma_configs
