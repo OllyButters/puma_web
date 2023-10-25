@@ -201,6 +201,7 @@ jobs:
       git config --global user.name "Azure pipeline"
       
       # Checkout again - stuff may have changed in this branch from elsewhere
+      git fetch --all
       git checkout gh-pages    
       git pull
 
@@ -224,6 +225,7 @@ jobs:
       git config --global user.name "Azure pipeline"
       
       # Checkout again - stuff may have changed from elsewhere
+      git fetch --all
       git checkout main
       git pull
 
