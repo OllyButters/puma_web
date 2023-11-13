@@ -55,7 +55,7 @@ schedules:
     displayName: Nightly build
     branches:
      include:
-      - master
+      - main
     always: true
 
 
