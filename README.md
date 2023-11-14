@@ -5,6 +5,6 @@ The PUMA pipeline [https://github.com/OllyButters/puma/](https://github.com/Olly
 
 | Name                                                                | Source of list                                                                                     | Info                   | PUMA Link             |
 | ---                                                                 | ---                                                                                                | ---                    | ---                    | 
-| [ARC](https://arc-nwc.nihr.ac.uk/)                                  | Live list of the ARC NWC publications                                                              |                        | [ARC](https://ollybutters.github.io/puma_web/arc/) |
+| [ARC](https://arc-nwc.nihr.ac.uk/)                                  | Live list of the ARC NWC publications                                                              |                        | [ARC](https://ollybutters.github.io/puma_web/arcnwc/) |
 | [ALSPAC](http://www.bristol.ac.uk/alspac/researchers/publications/) | [https://wellcomeopenresearch.org/articles/3-161](https://wellcomeopenresearch.org/articles/3-161) | Covers years 1989-2015 | [alspac](https://ollybutters.github.io/puma_web/alspac/) | 
 | Olly                                                                | Olly's publication list                                                                            | Several non PubMed, so not a rich dataset. | [olly](https://ollybutters.github.io/puma_web/olly/) |
