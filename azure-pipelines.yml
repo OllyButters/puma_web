@@ -28,7 +28,7 @@ resources:
     name: OllyButters/puma_configs
     ref: master
 
-  # The gh-pages branch of puma_Web repo
+  # The gh-pages branch
   - repository: puma_web
     type: github
     endpoint: puma_gh_deployment
@@ -87,15 +87,19 @@ jobs:
     # This may give an error in the logs like:
     # [warning]Unable move and reuse existing repository to required location
     # This is an Azure bug - https://github.com/microsoft/azure-pipelines-yaml/issues/403
+
   - checkout: puma_source
     path: 'puma'
+
+  - checkout: self
+    path: 'web'
+    persistCredentials: true
 
   - checkout: puma_configs
     path: 'configs'
 
-  - checkout: puma_web
-    path: 'web'
-    persistCredentials: true
+  - checkout: puma
+    path: 'puma'
 
   - checkout: puma_cache
     path: 'cache'
