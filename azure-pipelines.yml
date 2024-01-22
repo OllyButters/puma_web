@@ -78,6 +78,9 @@ jobs:
       ARCNWC:
         config_file_name: 'config_ARCNWC.ini'
         project_short_name: 'arcnwc'
+      ARCNWC_merged:
+        config_file_name: 'config_ARCNWC_merged.ini'
+        project_short_name: 'arcnwc_merged'
 
     maxParallel: 2
 
