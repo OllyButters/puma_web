@@ -63,7 +63,7 @@ jobs:
 - job: RUN_PUMA
   timeoutInMinutes: 120
   pool:
-    vmImage: 'Ubuntu 20.04'
+    vmImage: 'Ubuntu 22.04'
   strategy:
     matrix:
       OLLY:
