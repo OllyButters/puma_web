@@ -40,7 +40,7 @@ resources:
     type: github
     endpoint: puma_gh_deployment
     name: OllyButters/puma_cache
-    ref: main
+    ref: cached_data
 
 
 #########################################################################################
@@ -255,7 +255,7 @@ jobs:
       
       # Checkout again - stuff may have changed from elsewhere
       git fetch --all
-      git checkout main
+      git checkout cached_data
       git pull
 
       git add .
