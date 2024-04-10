@@ -112,7 +112,7 @@ jobs:
       echo "Time now:"
       echo $(date +%s)
 
-      let allowed_dif=100
+      let allowed_dif=6*24*60*60
       
       files=$(project_short_name)/raw/scopus/*
 
