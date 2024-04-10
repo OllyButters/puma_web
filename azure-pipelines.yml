@@ -163,8 +163,6 @@ jobs:
         done
       fi
 
-      rm -rf *
-
     workingDirectory: $(Pipeline.Workspace)/cache
     displayName: 'Clear old cache files'
     condition: succeeded()
