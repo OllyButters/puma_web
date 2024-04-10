@@ -122,6 +122,7 @@ jobs:
       then
         for thisFile in ${files}
         do
+          echo "----------"
           echo ${thisFile}
           
           fileAge=$(git log -1 --pretty="format:%at" ${thisFile})
