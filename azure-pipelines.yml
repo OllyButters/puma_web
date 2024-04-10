@@ -109,6 +109,9 @@ jobs:
     # from github they have a modification date of now (according to the OS).
   - bash: |
 
+      echo "Time now:"
+      echo $(date +%s)
+
       let allowed_dif=7*24*60*60
       
       files=$(project_short_name)/raw/scopus/*
@@ -128,6 +131,8 @@ jobs:
           now=$(date +%s)
     
           let diff=now-fileAge
+
+          echo ${diff}
     
           if [ "${diff}" -gt "${allowed_dif}" ]
           then
