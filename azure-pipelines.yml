@@ -120,8 +120,10 @@ jobs:
         for thisFile in ${files}
         do
           echo ${thisFile}
+          
           fileAge=$(git log -1 --pretty="format:%at" ${thisFile})
-    
+          echo $(fileAge)
+          
           now=$(date +%s)
     
           let diff=now-fileAge
