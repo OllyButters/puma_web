@@ -123,6 +123,7 @@ jobs:
           
           fileAge=$(git log -1 --pretty="format:%at" ${thisFile})
           echo ${fileAge}
+          echo $(date -d @${fileAge})
           
           now=$(date +%s)
     
