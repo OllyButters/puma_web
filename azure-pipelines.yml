@@ -112,7 +112,7 @@ jobs:
       echo "Time now:"
       echo $(date +%s)
 
-      let allowed_dif=7*24*60*60
+      let allowed_dif=100
       
       files=$(project_short_name)/raw/scopus/*
 
@@ -262,9 +262,9 @@ jobs:
       git config --global user.name "Azure pipeline"
       
       # Checkout again - stuff may have changed from elsewhere
-      git fetch --all
-      git checkout cached_data
-      git pull
+      #git fetch --all
+      #git checkout cached_data
+      #git pull
 
       git add .
       git commit -m "Automatically updating cache files for $(project_short_name)"
@@ -282,7 +282,7 @@ jobs:
       
       ls
 
-      cat *.log
+      cat $(project_short_name).log
       
     workingDirectory: $(Pipeline.Workspace)/puma/logs
     displayName: 'Print logfile'
