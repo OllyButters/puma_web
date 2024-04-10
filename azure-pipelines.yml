@@ -101,7 +101,7 @@ jobs:
     persistCredentials: true
 
   - checkout: puma_cache
-    path: 'cache'
+    path: 'broken-cache'
     persistCredentials: true
 
     #####################################################################################
