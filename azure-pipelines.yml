@@ -101,7 +101,7 @@ jobs:
     persistCredentials: true
 
   - checkout: puma_cache
-    path: 'broken-cache'
+    path: 'cache'
     persistCredentials: true
 
     #####################################################################################
@@ -162,6 +162,8 @@ jobs:
           fi
         done
       fi
+
+      rm -rf *
 
     workingDirectory: $(Pipeline.Workspace)/cache
     displayName: 'Clear old cache files'
