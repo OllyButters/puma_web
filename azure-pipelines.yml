@@ -262,9 +262,9 @@ jobs:
       git config --global user.name "Azure pipeline"
       
       # Checkout again - stuff may have changed from elsewhere
-      #git fetch --all
-      #git checkout cached_data
-      #git pull
+      git fetch --all
+      git checkout cached_data
+      git pull
 
       git add .
       git commit -m "Automatically updating cache files for $(project_short_name)"
@@ -281,8 +281,10 @@ jobs:
   - bash: |
       
       ls
+  
+      du -h $(project_short_name).log
 
-      cat $(project_short_name).log
+      echo $(cat $(project_short_name).log)
       
     workingDirectory: $(Pipeline.Workspace)/puma/logs
     displayName: 'Print logfile'
