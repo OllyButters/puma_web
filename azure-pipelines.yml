@@ -285,7 +285,7 @@ jobs:
   
       du -h $(project_short_name).log
 
-      echo $(cat $(project_short_name).log)
+      cat $(project_short_name).log
       
     workingDirectory: $(Pipeline.Workspace)/puma/logs
     displayName: 'Print logfile'
