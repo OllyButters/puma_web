@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+    <head>
+        <title>
+            Publications
+        </title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="../css/style_main.css">
+        <link rel="stylesheet" href="../css/colour_scheme.css">
+        <script src="../timestamp.js"></script>
+        <script src="../iframe.js" defer></script>
+        <script>
+        var name = "DataSHIELD";
+        </script>
+        <script src="search.js"></script>
+        <style>
+        button { height:2em; font-size:1em; margin-left:5px; } input#search { width:50%; }
+        </style>
+    </head>
+    <body>
+        <div id='header-container'>
+            <div class='header width-master' role='banner'>
+                <div class='maintitle' id='maintitle1'>
+                    <span id='title1'><a href='../index.html'>DataSHIELD - Publications</a></span>
+                </div>
+            </div>
+        </div>
+        <div id="wrapper" class="width-master">
+            <div id="col1" role="navigation">
+                <!-- navigation object : navigation -->
+                <ul class="navgroup">
+                    <li>
+                        <a href="../index.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="../help/index.html">About</a>
+                    </li>
+                    <li>
+                        <a href="../search/index.html">Search</a>
+                    </li>
+                    <li>
+                        <a href="../keywords/index.html">All Keywords</a>
+                    </li>
+                    <li>
+                        <a href="../mesh/index.html">Major Keywords (MeSH)</a>
+                    </li>
+                    <li>
+                        <a href="../country/index.html">Map by Country</a>
+                    </li>
+                    <li>
+                        <a href="../institute/index.html">Map by UK institute</a>
+                    </li>
+                    <li>
+                        <a href="../metrics/index.html">Metrics</a>
+                    </li>
+                    <li>
+                        <a href="../keyword_wordcloud/index.html">Keyword Cloud</a>
+                    </li>
+                    <li>
+                        <a href="../abstractwordcloud/index.html">Abstract Word Cloud</a>
+                    </li>
+                </ul>
+                <div class="after-navgroup">
+                    <!-- navigation object : navigation bottom --><!-- start navigation : additional logo -->
+                </div>
+            </div>
+            <p id="breadcrumbs">
+                <a href="../index.html">Home</a> &gt; Search
+            </p>
+            <div id="content" role="main">
+                <h1 id="pagetitle">
+                    Search
+                </h1>
+                <p>
+                    Search for the fields titles, abstracts, keywords and authors.<br>
+                    To narrow down the results search for multiple fields at once.
+                </p>
+                <p>
+                    <input type="text" id="search"><button onclick="search();">Search</button>
+                </p>
+                <div style="display:none;" id="searching">
+                    Searching...
+                </div>
+                <h2 id="num_search_results"></h2>
+                <div id="search_results"></div>
+                <script id="search_data">
+                var papers = [{"IDs": {"DOI": "10.1093/ije/dyu188", "PMID": "25261970"}, "title": "DataSHIELD: taking the analysis to the data, not the data to the analysis.", "abstract": "[\"Research in modern biomedicine and social science requires sample sizes so large that they can often only be achieved through a pooled co-analysis of data from several studies. But the pooling of information from individuals in a central database that may be queried by researchers raises important ethico-legal questions and can be controversial. In the UK this has been highlighted by recent debate and controversy relating to the UK's proposed 'care.data' initiative, and these issues reflect important societal and professional concerns about privacy, confidentiality and intellectual property. DataSHIELD provides a novel technological solution that can circumvent some of the most basic challenges in facilitating the access of researchers and other healthcare professionals to individual-level data.\", 'Commands are sent from a central analysis computer (AC) to several data computers (DCs) storing the data to be co-analysed. The data sets are analysed simultaneously but in parallel. The separate parallelized analyses are linked by non-disclosive summary statistics and commands transmitted back and forth between the DCs and the AC. This paper describes the technical implementation of DataSHIELD using a modified R statistical environment linked to an Opal database deployed behind the computer firewall of each DC. Analysis is controlled through a standard R environment at the AC.', 'Based on this Opal/R implementation, DataSHIELD is currently used by the Healthy Obese Project and the Environmental Core Project (BioSHaRE-EU) for the federated analysis of 10 data sets across eight European countries, and this illustrates the opportunities and challenges presented by the DataSHIELD approach.', 'DataSHIELD facilitates important research in settings where: (i) a co-analysis of individual-level data from several studies is scientifically necessary but governance restrictions prohibit the release or sharing of some of the required data, and/or render data access unacceptably slow; (ii) a research group (e.g. in a developing nation) is particularly vulnerable to loss of intellectual property-the researchers want to fully share the information held in their data with national and international collaborators, but do not wish to hand over the physical data themselves; and (iii) a data set is to be included in an individual-level co-analysis but the physical size of the data precludes direct transfer to a new site for analysis.']", "keywords": {"mesh": [{"term": "Biomedical Research", "major": "Y"}, {"term": "Computational Biology", "major": "N"}, {"term": "Computer Security", "major": "Y"}, {"term": "Confidentiality", "major": "Y"}, {"term": "Databases, Factual", "major": "N"}, {"term": "Datasets as Topic", "major": "Y"}, {"term": "Humans", "major": "N"}, {"term": "Information Storage and Retrieval", "major": "Y"}, {"term": "United Kingdom", "major": "N"}], "other": ["DataSHIELD", "ELSI", "bioinformatics", "confidentiality", "disclosure", "distributed computing", "intellectual property", "pooled analysis", "privacy"]}, "full_author_list": ["Gaye A", "Marcon Y", "Isaeva J", "LaFlamme P", "Turner A", "Jones E", "Minion J", "Boyd A", "Newby C", "Nuotio M", "Wilson R", "Butters O", "Murtagh B", "Demir I", "Doiron D", "Giepmans L", "Wallace S", "Budin-Lj\u00f8sne I", "Oliver Schmidt C", "Boffetta P", "Boniol M", "Bota M", "Carter K", "deKlerk N", "Dibben C", "Francis R", "Hiekkalinna T", "Hveem K", "Kval\u00f8y K", "Millar S", "Perry I", "Peters A", "Phillips C", "Popham F", "Raab G", "Reischl E", "Sheehan N", "Waldenberger M", "Perola M", "van den Heuvel E", "Macleod J", "Knoppers B", "Stolk R", "Fortier I", "Harris J", "Woffenbuttel B", "Murtagh M", "Ferretti V", "Burton P"], "journal": {"journal_name": "Int J Epidemiol", "volume": "43", "issue": "6"}}];
+                </script>
+            </div>
+        </div>
+        <div class="foot">
+            <span id="update_timestamp"><a href="..//timestamp.txt">Update time</a></span>
+            <script type="text/javascript" src="..//timestamp.js"></script>
+            <script>
+            update_timestamp("..//timestamp.txt")
+            </script>
+        </div>
+    </body>
+</html>
