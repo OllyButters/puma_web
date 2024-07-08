@@ -69,9 +69,9 @@ jobs:
       OLLY:
         config_file_name: 'config_olly.ini'
         project_short_name: 'olly'
-      #ALSPAC:
-      #  config_file_name: 'config_ALSPAC.ini'
-      #  project_short_name: 'alspac'
+      ALSPAC:
+        config_file_name: 'config_ALSPAC.ini'
+        project_short_name: 'alspac'
       ARCNWC:
         config_file_name: 'config_ARCNWC.ini'
         project_short_name: 'arcnwc'
