@@ -72,16 +72,12 @@ jobs:
       #ALSPAC:
       #  config_file_name: 'config_ALSPAC.ini'
       #  project_short_name: 'alspac'
-      #CLAHRC:
-      #  config_file_name: 'config_clahrc.ini'
-      #  project_short_name: 'clahrc'
       ARCNWC:
         config_file_name: 'config_ARCNWC.ini'
         project_short_name: 'arcnwc'
-      #ARCNWC_merged:
-      #  config_file_name: 'config_ARCNWC_merged.ini'
-      #  project_short_name: 'arcnwc_merged'
-
+      DATASHIELD:
+        config_file_name: 'config_DataSHIELD.ini'
+        project_short_name: 'datashield'
     maxParallel: 2
 
   steps:
