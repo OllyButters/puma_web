@@ -72,7 +72,7 @@ jobs:
     vmImage: 'ubuntu-22.04'
   strategy:
     matrix:
-      ${{ if eq(variables['Build.CronSchedule.DisplayName'], 'Weekly build') }}:
+      ${{ if or(eq(variables['Build.CronSchedule.DisplayName'], 'Weekly build'), eq(variables['Build.Reason'], 'manual')) }}:
         OLLY:
           config_file_name: 'config_olly.ini'
           project_short_name: 'olly'
@@ -82,7 +82,7 @@ jobs:
         ARCNWC:
           config_file_name: 'config_ARCNWC.ini'
           project_short_name: 'arcnwc'
-      ${{ if eq(variables['Build.CronSchedule.DisplayName'], 'Hourly during work') }}:
+      ${{ if or(eq(variables['Build.CronSchedule.DisplayName'], 'Hourly during work'), eq(variables['Build.Reason'], 'manual')) }}:
         DATASHIELD:
           config_file_name: 'config_DataSHIELD.ini'
           project_short_name: 'datashield'
