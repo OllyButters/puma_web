@@ -52,7 +52,13 @@ trigger: none
 # Do run on a schedule though.
 schedules:
   - cron: "32 1 * * 0"
-    displayName: Weekly buildy
+    displayName: Weekly build
+    branches:
+     include:
+      - main
+    always: true
+  - cron: "0 9-17 * * 1-5"
+    displayName: Hourly during work
     branches:
      include:
       - main
@@ -70,15 +76,16 @@ jobs:
         OLLY:
           config_file_name: 'config_olly.ini'
           project_short_name: 'olly'
-      ALSPAC:
-        config_file_name: 'config_ALSPAC.ini'
-        project_short_name: 'alspac'
-      ARCNWC:
-        config_file_name: 'config_ARCNWC.ini'
-        project_short_name: 'arcnwc'
-      DATASHIELD:
-        config_file_name: 'config_DataSHIELD.ini'
-        project_short_name: 'datashield'
+        ALSPAC:
+          config_file_name: 'config_ALSPAC.ini'
+          project_short_name: 'alspac'
+        ARCNWC:
+          config_file_name: 'config_ARCNWC.ini'
+          project_short_name: 'arcnwc'
+      ${{ if eq(variables['Build.CronSchedule.DisplayName'], 'Hourly during work') }}:
+        DATASHIELD:
+          config_file_name: 'config_DataSHIELD.ini'
+          project_short_name: 'datashield'
     maxParallel: 2
 
   steps:
