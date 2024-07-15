@@ -66,10 +66,10 @@ jobs:
     vmImage: 'ubuntu-22.04'
   strategy:
     matrix:
-    ${{ if eq('a', 'a') }}:
-      OLLY:
-        config_file_name: 'config_olly.ini'
-        project_short_name: 'olly'
+      ${{ if eq('a', 'a') }}:
+        OLLY:
+          config_file_name: 'config_olly.ini'
+          project_short_name: 'olly'
       ALSPAC:
         config_file_name: 'config_ALSPAC.ini'
         project_short_name: 'alspac'
