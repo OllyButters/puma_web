@@ -57,7 +57,7 @@ schedules:
      include:
       - main
     always: true
-  - cron: "0 9-17 * * 1-5"
+  - cron: "0 8-17 * * 1-5"
     displayName: Hourly during work
     branches:
      include:
