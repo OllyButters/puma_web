@@ -18,8 +18,8 @@ resources:
   - repository: puma_source
     type: github
     endpoint: puma_gh_deployment
-    name: OllyButters/puma
-    ref: releases/latest
+    name: OllyButters/puma/releases/latest
+    #ref: releases/latest
   
   # Where all the configs are (private repo)
   - repository: puma_configs
