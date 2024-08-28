@@ -75,10 +75,6 @@ jobs:
         ARCNWC:
           config_file_name: 'config_ARCNWC.ini'
           project_short_name: 'arcnwc'
-      ${{ if or(eq(variables['Build.CronSchedule.DisplayName'], 'Hourly during work'), eq(variables['Build.Reason'], 'manual')) }}:
-        DATASHIELD:
-          config_file_name: 'config_DataSHIELD.ini'
-          project_short_name: 'datashield'
     maxParallel: 2
 
   steps:
