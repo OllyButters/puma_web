@@ -1,6 +1,6 @@
 # Publications Metadata Augmentation (PUMA) pipeline web output
 
-The PUMA pipeline [https://github.com/OllyButters/puma/](https://github.com/OllyButters/puma/) takes a list of publications (usually academic journal articles) and adds metadata to them so some bibliometric analysis cana be done. From this we can automatically build some web pages which displays this information and makes the list of publications easy to explore.
+The PUMA pipeline [https://github.com/FederatedMethods/puma/](https://github.com/FederatedMethods/puma/) takes a list of publications (usually academic journal articles) and adds metadata to them so some bibliometric analysis cana be done. From this we can automatically build some web pages which displays this information and makes the list of publications easy to explore.
 
 
 | Name                                     | Source of list                        | Info                                       | PUMA Link             |
