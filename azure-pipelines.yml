@@ -2,7 +2,7 @@
 # PUMA Azure run.
 # Checks out all the various codes (source, config, web), runs the
 # pipeline then commits the HTML files back to GitHub to display at
-# https://ollybutters.github.io/puma/
+# https://ollybutters.github.io/puma_web/
 # Set to run regularly so the citations are updated as mandated by
 # Scopus.
 #
@@ -18,7 +18,7 @@ resources:
   - repository: puma_source
     type: github
     endpoint: puma_gh_deployment
-    name: OllyButters/puma
+    name: FederatedMethods/puma
     ref: refs/tags/v2.11
   
   # Where all the configs are (private repo)
